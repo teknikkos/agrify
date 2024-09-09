@@ -1,5 +1,8 @@
 pluginManagement {
     repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -21,4 +24,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Agrify"
 include(":app")
- 
