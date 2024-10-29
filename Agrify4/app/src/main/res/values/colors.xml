@@ -14,4 +14,5 @@
     <color name="card_blue">#1976D2</color>
     <color name="card_red">#FF3D00</color>
     <color name="dark_card">#26332A</color>
+    <color name="colorAccent">#E5FFE9</color>
 </resources>
