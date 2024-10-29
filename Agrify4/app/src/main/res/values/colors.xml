@@ -10,5 +10,8 @@
     <color name="primary_color">#44CE59</color>
     <color name="mediumGreen">#5FD495</color>
     <color name="heavyGreen">#5FB988</color>
-    <color name="Yellow">#FFD350</color>
+    <color name="card_yellow">#FFD350</color>
+    <color name="card_blue">#1976D2</color>
+    <color name="card_red">#FF3D00</color>
+    <color name="dark_card">#26332A</color>
 </resources>
