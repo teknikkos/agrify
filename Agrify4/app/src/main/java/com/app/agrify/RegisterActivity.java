@@ -1,4 +1,4 @@
-package com.rhix.newsplashactivity;
+package com.app.agrify;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,8 +23,8 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText lastNameEditText, firstNameEditText, emailEditText, passwordEditText, confirmPasswordEditText;
     private Button registerButton;
     private ProgressBar progressBar;
-    private static final String API_URL = "Replace with registration API URL";
-    private static final String API_KEY = "Replace with your own API key"; // Replace with your API key
+    private static final String API_URL = "https://devlab.helioho.st/api/register.php";
+    private static final String API_KEY = "2a005d85a47c40e47ae6aff4556f824f9148d5bd647735750b9373dede0f54b3"; // Replace with your API key
     private TextView loginLink;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
