@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize">
+    android:paddingTop="0dp">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -14,13 +14,18 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="600dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="24dp"
         android:background="@drawable/rounded_bottom_nav"
+        app:backgroundTint="@color/background_color"
+        app:itemIconTint="@drawable/bottom_nav_icon_color_selector"
+        app:itemPaddingBottom="20dp"
+        app:itemPaddingTop="20dp"
+        app:itemTextColor="@drawable/bottom_nav_icon_color_selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.882"
         app:menu="@menu/bottom_nav_menu" />
 
     <fragment
