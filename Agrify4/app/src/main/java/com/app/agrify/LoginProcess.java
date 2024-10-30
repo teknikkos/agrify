@@ -81,7 +81,7 @@ public class LoginProcess extends AppCompatActivity {
 
                 // Prepare the request body
                 // change with your own registered API key
-                String requestBody = "api_key={2a005d85a47c40e47ae6aff4556f824f9148d5bd647735750b9373dede0f54b3}&email=" + URLEncoder.encode(email, "UTF-8") +
+                String requestBody = "api_key=2a005d85a47c40e47ae6aff4556f824f9148d5bd647735750b9373dede0f54b3&email=" + URLEncoder.encode(email, "UTF-8") +
                         "&password=" + URLEncoder.encode(password, "UTF-8");
 
                 // Write request body

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="@color/white"> <!-- Set a background color -->
+    android:background="@color/background_color"> <!-- Set a background color -->
 
     <!-- App Logo -->
     <ImageView
