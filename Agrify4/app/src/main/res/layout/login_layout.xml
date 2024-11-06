@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="@color/background_color"> <!-- Set a background color -->
+    android:background="@color/background_color"
+    tools:ignore="ExtraText"> <!-- Set background color to white -->
 
     <!-- App Logo -->
     <ImageView
@@ -23,8 +25,8 @@
         android:text="@string/app_name"
         android:fontFamily="@font/righteous"
         android:textSize="24sp"
-    android:textStyle="bold"
-    android:layout_marginBottom="24dp" /> <!-- Add bottom margin for spacing -->
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" /> <!-- Add bottom margin for spacing -->
 
     <EditText
         android:id="@+id/emailEditText"
@@ -34,8 +36,7 @@
         android:minHeight="56dp"
         android:padding="12dp"
         android:textSize="16sp"
-        android:background="@drawable/edittext_background"
-    android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
+        android:backgroundTint="@color/heavyGreen" />
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -46,8 +47,7 @@
         android:minHeight="56dp"
         android:padding="12dp"
         android:textSize="16sp"
-        android:background="@drawable/edittext_background"
-    android:layout_marginBottom="24dp" /> <!-- Add bottom margin for spacing -->
+        android:backgroundTint="@color/heavyGreen"/> <!-- Add bottom margin for spacing -->
 
     <Button
         android:id="@+id/loginButton"
@@ -57,9 +57,9 @@
         android:minHeight="56dp"
         android:textSize="18sp"
         android:backgroundTint="@color/colorAccent"
-    android:textColor="@android:color/white"
-    android:padding="12dp"
-    android:layout_marginBottom="16dp"/> <!-- Add bottom margin for spacing -->
+        android:textColor="@android:color/background_dark"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/> <!-- Add bottom margin for spacing -->
 
     <TextView
         android:id="@+id/registerLink"
@@ -81,3 +81,4 @@
         android:layout_gravity="center"
         android:visibility="gone" />
 </LinearLayout>
+

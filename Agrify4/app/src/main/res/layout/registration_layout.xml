@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="@color/background_color"> <!-- Set a background color -->
+    android:background="@color/background_color"> <!-- Set background color to white -->
 
     <!-- App Logo -->
     <ImageView
@@ -34,8 +34,9 @@
         android:minHeight="56dp"
         android:padding="12dp"
         android:textSize="16sp"
-        android:background="@drawable/edittext_background"
-        android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
+        android:backgroundTint="@color/heavyGreen"
+    android:textColor="@color/background_color"
+    android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
 
     <EditText
         android:id="@+id/firstNameEditText"
@@ -45,8 +46,9 @@
         android:minHeight="56dp"
         android:padding="12dp"
         android:textSize="16sp"
-        android:background="@drawable/edittext_background"
-        android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
+        android:backgroundTint="@color/heavyGreen"
+    android:textColor="@color/background_color"
+    android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
 
     <EditText
         android:id="@+id/emailEditText"
@@ -56,8 +58,9 @@
         android:minHeight="56dp"
         android:padding="12dp"
         android:textSize="16sp"
-        android:background="@drawable/edittext_background"
-        android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
+        android:backgroundTint="@color/heavyGreen"
+    android:textColor="@color/background_color"
+    android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -68,7 +71,8 @@
         android:minHeight="56dp"
         android:padding="12dp"
         android:textSize="16sp"
-        android:background="@drawable/edittext_background"
+        android:backgroundTint="@color/heavyGreen"
+        android:textColor="@color/background_color"
         android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
 
     <EditText
@@ -80,7 +84,8 @@
         android:minHeight="56dp"
         android:padding="12dp"
         android:textSize="16sp"
-        android:background="@drawable/edittext_background"
+        android:backgroundTint="@color/heavyGreen"
+        android:textColor="@color/background_color"
         android:layout_marginBottom="24dp" /> <!-- Add bottom margin for spacing -->
 
     <Button
@@ -91,21 +96,25 @@
         android:minHeight="56dp"
         android:textSize="18sp"
         android:backgroundTint="@color/colorAccent"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/background_dark"
         android:padding="12dp"
         android:layout_marginBottom="16dp"/> <!-- Add bottom margin for spacing -->
+
     <TextView
         android:id="@+id/loginLink"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Already have an account? Login here"
-        android:textColor="@color/colorAccent"
-        android:textSize="16sp"
-        android:minHeight="48dp"
+        android:layout_height="52dp"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:clickable="true"
-        android:focusable="true"/>
+        android:focusable="true"
+        android:minWidth="200dp"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:text="Already have an account? Login here"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
