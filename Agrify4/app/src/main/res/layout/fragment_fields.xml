@@ -13,122 +13,197 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:textSize="16sp"
         android:text="@string/field_report"
         android:fontFamily="@font/redditsans"
         android:textColor="@color/background_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <Button
-        android:id="@+id/field_card_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:width="320dp"
-        android:height="60dp"
-        android:text="@string/f_one"
-
-
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="409dp"
+        android:layout_height="380dp"
+        android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/field_report" />
+        app:layout_constraintTop_toBottomOf="@+id/field_report">
 
-        <Button
-            android:id="@+id/field_card_2"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:height="60dp"
-            android:width="320dp"
-            android:text="@string/f_two"
+            android:orientation="vertical">
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/field_card_1" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/secondary_color"
+                app:cardCornerRadius="12dp">
 
-        <Button
-            android:id="@+id/field_card_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:height="60dp"
-            android:width="320dp"
-            android:text="@string/f_three"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/reddit_sans_medium"
+                    android:text="Field 1"
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/field_card_2" />
-
-        <Button
-            android:id="@+id/field_card_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:height="60dp"
-            android:width="320dp"
-            android:text="@string/f_four"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/field_card_3" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/reddit_sans_medium"
+                    android:text="Months Left"
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
+            </androidx.cardview.widget.CardView>
 
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="371dp"
-        android:background="@color/dark_card"
-        android:orientation="vertical"
+            <androidx.cardview.widget.CardView
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/secondary_color"
+                app:cardCornerRadius="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/reddit_sans_medium"
+                    android:text="Field 2"
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/reddit_sans_medium"
+                    android:text="Months Left"
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/secondary_color"
+                app:cardCornerRadius="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/reddit_sans_medium"
+                    android:text="Field 3"
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/reddit_sans_medium"
+                    android:text="Months Left"
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fillViewport="true"
+        android:background="@color/primary_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/field_card_4"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
 
-        <TextView
-            android:id="@+id/available_f"
-            android:layout_width="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/redditsans"
-            android:text="@string/available_fields"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/free_card_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="20dp"
-            android:width="320dp"
-            android:height="60dp"
-            android:text="@string/free_one"
+            <TextView
+                android:id="@+id/available_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/redditsans"
+                android:text="@string/available_fields"
+                android:textColor="@color/background_white"
+                android:textSize="16dp"
+
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/background_white"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/reddit_sans_medium"
+                    android:text="Free"
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/reddit_sans_medium"
+                    android:text="Field 4"
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
+
+            </androidx.cardview.widget.CardView>
 
 
-            android:textColorLink="#00BCD4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/field_report" />
+        </LinearLayout>
+    </ScrollView>
 
-        <Button
-            android:id="@+id/free_card_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="5dp"
-            android:width="320dp"
-            android:height="60dp"
-            android:text="@string/free_two"
-
-
-            android:textColorLink="#00BCD4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/field_report" />
-
-    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        app:shapeAppearance="@style/fab_squared"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:backgroundTint="@color/background_white"
+        app:borderWidth="0dp"
+        android:src="@android:drawable/ic_menu_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintStart_toEndOf="@+id/field_report"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

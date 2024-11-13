@@ -14,18 +14,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop=""
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="-18dp"
         android:text="Welcome Back!"
-        android:fontFamily="@font/redditsans"
+        android:fontFamily="@font/reddit_sans_extrabold"
         android:textColor="@color/background_color"
         android:layout_gravity="center"
         android:textSize="32sp"
-        android:textFontWeight="800"
+        android:textFontWeight="800"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:fontFamily="@font/righteous"
         android:text="@string/app_name"
         android:textColor="@color/primary_color"
@@ -33,6 +33,29 @@
         android:textAllCaps="true"
         android:layout_gravity="center"
         android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-24dp"
+        android:layout_marginBottom="24dp"
+        android:text="at your service."
+        android:fontFamily="@font/reddit_sans_extrabold"
+        android:layout_gravity="center"
+        android:textColor="@color/background_color"
+        android:textSize="32sp"
+        android:textFontWeight="800"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:fontFamily="@font/righteous"
+        android:textColor="@color/background_color"
+        android:textSize="24sp"
+        android:layout_marginBottom="8sp"
+    />
 
     <EditText
         android:id="@+id/emailEditText"
@@ -57,17 +80,30 @@
         android:background="@drawable/edittext_background"
         android:layout_marginBottom="24dp" /> <!-- Add bottom margin for spacing -->
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="16dp"
+        android:text="Forgot Password?"
+        android:textColor="@color/primary_color"
+        android:fontFamily="@font/redditsans"
+        android:layout_gravity="end"
+
+        />
+
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/redditsans"
+        android:fontFamily="@font/reddit_sans_extrabold"
         android:text="@string/login"
+        android:textAllCaps="false"
         android:minHeight="56dp"
         android:textSize="18sp"
-        
+        android:letterSpacing="0"
         android:backgroundTint="@color/background_color"
-
     android:textColor="@color/white"
     android:padding="12dp"
     android:layout_marginBottom="16dp"/> <!-- Add bottom margin for spacing -->
@@ -79,8 +115,9 @@
         android:text="Don't have an account? Register Now"
         android:textColor="@color/background_color"
         android:textSize="16sp"
+        android:fontFamily="@font/redditsans"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="200dp"
         android:clickable="true"
         android:focusable="true"/>
 

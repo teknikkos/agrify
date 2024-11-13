@@ -5,26 +5,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="@color/background_color"> <!-- Set background color to white -->
+    android:background="@color/background_white"> <!-- Set background color to white -->
 
     <!-- App Logo -->
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/ic_launcher_foreground"
-        android:contentDescription="@string/app_logo"
-        android:layout_marginBottom="32dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:textSize="24sp"
+        android:layout_marginTop="32dp"
+        android:text="Let's Get"
+        android:textSize="32sp"
         android:textStyle="bold"
+        android:fontFamily="@font/reddit_sans_extrabold"
+        android:textFontWeight="900"
+        android:textColor="@color/background_color"
         android:layout_gravity="center"
         android:layout_marginBottom="24dp" /> <!-- Add bottom margin for spacing -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Started"
+        android:textAllCaps="true"
+        android:textSize="64dp"
+        android:textColor="@color/primary_color"
+        android:fontFamily="@font/righteous"
+        android:layout_gravity="center"
+        android:layout_marginTop="-32dp"
+        android:layout_marginBottom="24dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:textColor="@color/background_color"
+        android:fontFamily="@font/righteous"
+        android:textSize="24sp"
+        android:layout_marginBottom="8sp"
+        />
 
     <EditText
         android:id="@+id/lastNameEditText"
@@ -34,9 +53,10 @@
         android:minHeight="56dp"
         android:padding="12dp"
         android:textSize="16sp"
-        android:backgroundTint="@color/heavyGreen"
-    android:textColor="@color/background_color"
-    android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
+        android:fontFamily="@font/reddit_sans_semibold"
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/background_color"
+        android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
 
     <EditText
         android:id="@+id/firstNameEditText"
@@ -46,7 +66,8 @@
         android:minHeight="56dp"
         android:padding="12dp"
         android:textSize="16sp"
-        android:backgroundTint="@color/heavyGreen"
+        android:fontFamily="@font/reddit_sans_semibold"
+        android:background="@drawable/edittext_background"
     android:textColor="@color/background_color"
     android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
 
@@ -58,7 +79,8 @@
         android:minHeight="56dp"
         android:padding="12dp"
         android:textSize="16sp"
-        android:backgroundTint="@color/heavyGreen"
+        android:fontFamily="@font/reddit_sans_semibold"
+        android:background="@drawable/edittext_background"
     android:textColor="@color/background_color"
     android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
 
@@ -71,7 +93,8 @@
         android:minHeight="56dp"
         android:padding="12dp"
         android:textSize="16sp"
-        android:backgroundTint="@color/heavyGreen"
+        android:fontFamily="@font/reddit_sans_semibold"
+        android:background="@drawable/edittext_background"
         android:textColor="@color/background_color"
         android:layout_marginBottom="16dp" /> <!-- Add bottom margin for spacing -->
 
@@ -84,7 +107,8 @@
         android:minHeight="56dp"
         android:padding="12dp"
         android:textSize="16sp"
-        android:backgroundTint="@color/heavyGreen"
+        android:fontFamily="@font/reddit_sans_semibold"
+        android:background="@drawable/edittext_background"
         android:textColor="@color/background_color"
         android:layout_marginBottom="24dp" /> <!-- Add bottom margin for spacing -->
 
@@ -95,8 +119,11 @@
         android:text="Register"
         android:minHeight="56dp"
         android:textSize="18sp"
-        android:backgroundTint="@color/colorAccent"
-        android:textColor="@android:color/background_dark"
+        android:textAllCaps="false"
+        android:letterSpacing="0"
+        android:fontFamily="@font/reddit_sans_extrabold"
+        android:backgroundTint="@color/secondary_color"
+        android:textColor="@color/background_color"
         android:padding="12dp"
         android:layout_marginBottom="16dp"/> <!-- Add bottom margin for spacing -->
 
@@ -112,8 +139,8 @@
         android:minHeight="48dp"
         android:padding="12dp"
         android:text="Already have an account? Login here"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textColor="@color/background_color"
+        android:textSize="16sp" />
 
     <ProgressBar
         android:id="@+id/progressBar"

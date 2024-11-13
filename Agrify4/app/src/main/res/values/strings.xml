@@ -11,6 +11,12 @@
 
     <string name="ov">Overview</string>
 
+    <string name="login">Login</string>
+    <string name="sign_up">Signup</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
     <string name="f_stat">Field Status</string>
     <string name="f_date">Date Planted</string>
     <string name="f_stabi">Soil Stability</string>
