@@ -44,6 +44,10 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation("androidx.compose.material:material:1.3.1")
+
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

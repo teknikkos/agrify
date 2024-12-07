@@ -18,13 +18,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/background_color"
-            android:text="[PIE GRAPH]"
-            android:layout_gravity="center"/>
+        <WebView
+            android:id="@+id/chartWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"/>
     </androidx.cardview.widget.CardView>
 
     <TextView

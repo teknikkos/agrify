@@ -47,7 +47,7 @@ public class FieldsFragment extends Fragment {
                         // Reload list after product is added loadListView();  // Reload list after product is added
                     }
                 });
-                dialog.show(fragmentManager, "AddProductDialog");
+                dialog.show(fragmentManager, "AddFieldDialog");
             }
         });
 

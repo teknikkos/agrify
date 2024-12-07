@@ -18,35 +18,41 @@
         android:layout_height="50dp"
         android:layout_margin="6dp"
         android:hint="Soil Type"
-        android:inputType="number"/>
+        android:inputType="number"
+        />
 
     <EditText
         android:id="@+id/etCrop"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="6dp"
-        android:hint="Crop"/>
+        android:hint="Crop"
+        android:inputType="number"/>
 
     <EditText
         android:id="@+id/etDatePlanted"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="6dp"
-        android:hint="Date"/>
+        android:hint="Date"
+        android:inputType="date"
+        />
 
     <EditText
         android:id="@+id/etLatitude"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="6dp"
-        android:hint="Latitude"/>
+        android:hint="Latitude"
+        android:inputType="number"/>
 
     <EditText
         android:id="@+id/etLongitude"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="6dp"
-        android:hint="Longitude"/>
+        android:hint="Longitude"
+        android:inputType="number"/>
 
 
 
