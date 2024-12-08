@@ -41,4 +41,7 @@
     <string name="field_handlers">Field Foremen</string>
 
     <string name="app_logo">App Logo</string>
+
+    <string name="edit_field_report">Edit</string>
+    <string name="delete_field_report">delete</string>
 </resources>
