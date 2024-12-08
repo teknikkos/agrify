@@ -15,8 +15,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 public class ReportsFragment extends Fragment {
@@ -32,9 +33,9 @@ public class ReportsFragment extends Fragment {
         WebSettings webSettings = chartWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        // Load and parse JSON, then load the chart
+        // Load and parse the saved JSON file, then load the chart
         try {
-            String jsonData = loadJSONFromAsset();
+            String jsonData = loadJSONFromFile();  // Changed method to load from internal storage
             if (jsonData != null) {
                 String chartHTML = getChartHTML(jsonData);
                 chartWebView.loadDataWithBaseURL("file:///android_asset/", chartHTML, "text/html", "UTF-8", null);
@@ -48,14 +49,16 @@ public class ReportsFragment extends Fragment {
         return view;
     }
 
-    private String loadJSONFromAsset() {
+    private String loadJSONFromFile() {
         String json;
         try {
-            InputStream is = requireContext().getAssets().open("yearlyYieldReport.json");
-            int size = is.available();
+            // Load the JSON file from internal storage where it's saved
+            File file = new File(requireContext().getFilesDir(), "yearlyYieldReport.json");
+            FileInputStream fis = new FileInputStream(file);
+            int size = fis.available();
             byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
+            fis.read(buffer);
+            fis.close();
             json = new String(buffer, StandardCharsets.UTF_8);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -73,8 +76,8 @@ public class ReportsFragment extends Fragment {
         for (int i = 0; i < citiesArray.length(); i++) {
             JSONObject city = citiesArray.getJSONObject(i);
             String cityName = city.getString("name");
-            int population = city.getInt("Financial Report");
-            dataString.append("['").append(cityName).append("', ").append(population).append("],");
+            int financialReport = city.getInt("Financial Report");
+            dataString.append("['").append(cityName).append("', ").append(financialReport).append("],");
         }
 
         // HTML with embedded Google Charts JavaScript to render the pie chart
