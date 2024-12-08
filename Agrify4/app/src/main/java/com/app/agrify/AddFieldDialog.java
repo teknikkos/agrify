@@ -1,6 +1,7 @@
 package com.app.agrify;
 
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+
+import java.util.Calendar;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -51,6 +54,9 @@ public class AddFieldDialog extends DialogFragment {
         editTextLatitude = view.findViewById(R.id.etLatitude);
         editTextLongitude = view.findViewById(R.id.etLongitude);
 
+        // Set up the DatePickerDialog for the DatePlanted field
+        editTextDatePlanted.setOnClickListener(v -> showDatePickerDialog());
+
         // Initialize Retrofit
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://just1ncantiler0.heliohost.us/") // Replace with your server URL
@@ -61,19 +67,8 @@ public class AddFieldDialog extends DialogFragment {
         // Build the dialog
         builder.setView(view)
                 .setTitle("Add Field")
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();  // Close the dialog
-                    }
-                })
-                .setPositiveButton("Add Field", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Handle field addition
-                        handleAddField();
-                    }
-                });
+                .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
+                .setPositiveButton("Add Field", (dialog, which) -> handleAddField());
 
         AlertDialog dialog = builder.create();
 
@@ -88,6 +83,27 @@ public class AddFieldDialog extends DialogFragment {
         });
 
         return dialog;
+    }
+
+    private void showDatePickerDialog() {
+        // Get the current date
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        // Create a DatePickerDialog
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                getContext(),
+                (view, selectedYear, selectedMonth, selectedDay) -> {
+                    // Format the selected date as YYYY-MM-DD
+                    String formattedDate = selectedYear + "-" + (selectedMonth + 1) + "-" + selectedDay;
+                    editTextDatePlanted.setText(formattedDate);
+                },
+                year, month, day);
+
+        // Show the DatePickerDialog
+        datePickerDialog.show();
     }
 
     private void handleAddField() {
@@ -144,5 +160,4 @@ public class AddFieldDialog extends DialogFragment {
             }
         });
     }
-
 }

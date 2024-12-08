@@ -35,8 +35,8 @@
         android:layout_height="50dp"
         android:layout_margin="6dp"
         android:hint="Date"
-        android:inputType="date"
-        />
+        android:focusable="false"
+        android:clickable="true"/>
 
     <EditText
         android:id="@+id/etLatitude"
