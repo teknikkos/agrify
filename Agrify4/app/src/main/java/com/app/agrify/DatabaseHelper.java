@@ -64,7 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getAllData() {
         SQLiteDatabase db = this.getReadableDatabase();
-        return db.rawQuery("SELECT ID, Soil_Type_ID, Crop_ID, Date_Planted, field_Latitude, field_Longtitude FROM table_fields", null);
+        return db.rawQuery("SELECT * FROM table_Field", null);
     }
 
     public boolean deleteData(long id) {
