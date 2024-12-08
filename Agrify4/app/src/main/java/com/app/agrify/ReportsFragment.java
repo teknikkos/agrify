@@ -92,7 +92,7 @@ public class ReportsFragment extends Fragment {
                 dataString.toString() +
                 "            ]);" +
                 "            var options = {" +
-                "                title: 'Yearly Yield Report (TEST)'," +
+                "                title: 'Number of Crops'," +
                 "                pieHole: 0.1," + // Pie
                 "            };" +
                 "            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));" +
